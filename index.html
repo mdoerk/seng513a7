@@ -31,5 +31,41 @@
 
 </div>
 
+<!------------------------------------------- dta -------------------------------------------> 
+<div class='demo' id='dta'>
+	<ul>
+		<li class='fade'>dta_link1
+		<li class='fade'>Link2
+		<li class='fade'>Link3
+	</ul>
+
+	<script type="text/javascript" >
+	
+	// event method = hover, manipulation = css
+	$("li").hover(
+	function () {
+	$(this).css("color", "red")
+	$(this).append($("<span> ←</span>"));
+
+	}, 
+	function () {
+	$(this).css("color", "black")
+	$(this).find("span:last").remove();
+	
+	}
+	);
+	
+	//li with fade class
+	$("li.fade").hover(
+		function() {
+		$(this).fadeOut(100);
+		$(this).fadeIn(500);
+		
+	});
+	
+	</script>	
+</div>
+<!----------------------------------------- end dta ------------------------------------------> 
+
 </body>
 </html>
