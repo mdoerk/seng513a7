@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>SENG 513: Assignment 7</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>
+	<style type="text/css" media="screen">
+		div.demo {
+			height: 300px;
+			width: 600px;
+			margin: 25px;
+			border: 1px solid #999;
+		}
+	</style>
+	<script type="text/javascript">
+	</script>	
+</head>
+<body>
+
+<div class='demo' id='mdoerk'>
+
+	<input type='button' value='catch me'>
+
+	<script type="text/javascript" >
+	$("#nrchtct input").css({position: 'relative', top: 150, left: 275}).mouseenter(
+	function(){
+		var x = Math.random()*200-100, y = Math.random()*200-100;
+		$(this).animate({left: '+='+x, top: '+='+y}, 500);
+	})	;
+	</script>	
+
+</div>
+
+</body>
+</html>
