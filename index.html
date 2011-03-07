@@ -31,5 +31,24 @@
 
 </div>
 
+<div class="demo" id="jewong"> 
+	<input type="button" value="catch me v2">
+	<script type="text/javascript" > 
+		interval = setInterval('moveButton()', 500); 
+		
+		function moveButton() { 
+			var x = Math.round(Math.random() * 500), y = Math.round(Math.random() * 200); 
+			// My manipulation method (.css) 
+			$('#jewong input').css({ position: 'relative', top: y, left: x}); 
+		}
+		
+		// My event method (mousedown()) 
+		$('#jewong input').mousedown(function() {
+			$(this).val('Good job catching me!'); 
+			clearTimeout(interval); 
+		}); 
+	</script> 
+</div> 
+
 </body>
 </html>
