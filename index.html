@@ -31,5 +31,37 @@
 
 </div>
 
+<!-- Colour the quote -->
+<div class='demo' id='chyfung'>
+
+	<p id='Churchill_quote'>
+	A man does what he must - in spite of personal consequences, in spite of obstacles and dangers and pressures - and that is the basis of all human morality. 
+	Winston Churchill
+	</p>
+
+	<ul id='chyfung_list'>
+		<li style='color: #FF0000' id='chyfung_red'> red </li>
+		<li style='color: #0000FF' id='chyfung_blue'> blue </li>
+		<li style='color: #00FF00' id='chyfung_green'> green </li>
+		<li style='color: #000000' id='chyfung_black'> black </li>
+	</ul>
+	
+	<script type="text/javascript">
+	$('#chyfung_red').click(function(){
+		$('#Churchill_quote').attr('style', 'color: #FF0000');
+	});
+	$('#chyfung_blue').click(function(){
+		$('#Churchill_quote').attr('style', 'color: #0000FF');
+	});
+	$('#chyfung_green').click(function(){
+		$('#Churchill_quote').attr('style', 'color: #00FF00');
+	});
+	$('#chyfung_black').click(function(){
+		$('#Churchill_quote').attr('style', 'color: #000000');
+	});
+	</script>
+	
+</div>
+
 </body>
 </html>
