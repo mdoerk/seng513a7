@@ -11,6 +11,12 @@
 			margin: 25px;
 			border: 1px solid #999;
 		}
+		div.bar {
+			height: 300px;
+			width: 25px;
+			background-color: #030F56;
+			float:left;
+		}
 	</style>
 	<script type="text/javascript">
 	</script>	
@@ -29,6 +35,44 @@
 	})	;
 	</script>	
 
+</div>
+
+<div class='demo' id='russkubik'>
+	
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<script type="text/javascript" >
+	$(".bar").mouseenter(
+	function(){
+		$(this).hide('slow');
+	}).mouseleave(
+	function(){
+		$(this).show('slow');
+	});
+	</script>
+	
 </div>
 
 </body>
