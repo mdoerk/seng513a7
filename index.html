@@ -31,5 +31,28 @@
 
 </div>
 
+
+//xiaowei
+<div class='demo' id='xiaowei'>
+	<input  name = 'apple' type = 'button' value = 'touch me'>
+
+	<script type = "text/javascript">
+	$("#xiaowei input").css({position: 'relative', top: 50, left: 150, height: 200, width: 300}).mouseover(function(){
+
+	$("#xiaowei input").attr("value", "^_____^");
+
+	$(this).fadeTo(1000,0.4);	
+	$(this).css("background-color", "pink"); 
+	});
+	$("#xiaowei input").mouseleave(function(){
+	$(this).fadeTo(1000,1.0);
+	$(this).css("background-color","#F88017");
+	
+	});
+	</script>
+</input>	
+</div>
+
+
 </body>
 </html>
