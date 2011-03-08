@@ -215,21 +215,19 @@
 	
 </div>
 
-<div class='demo' id='chunkjh'>
-	<p class="news">Hey you know what?</p>
-	<span> You are Awesome  </span>
-
-	<script type="text/javascript" >
-	$("p.news").click(function(){
-		$(this).removeClass("news");
-		$(this).addClass("activate");
-		$("span").css('display', 'inline').fadeOut(1000).fadeIn(1000);
-	});
-	
-
-
-	</script>	
-
+<div class='demo' id='remyd'>
+    <p>
+        Click on the button to hide or show a message.
+    </p>
+    <input type='button' value='Toggle'>
+    <script type="text/javascript">
+        $('#remyd input').click(function(event) {
+            $('#remyd .toggle').toggle(function() {});
+        });
+    </script>
+    <p class="toggle">
+        The message is shown!
+    </p>
 </div>
 
 </body>
