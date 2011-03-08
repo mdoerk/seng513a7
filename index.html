@@ -37,20 +37,6 @@
 
 </div>
 
-<div class='demo' id='yytcheng'>
-
-	<input type='button' value='catch me'>
-
-	<script type="text/javascript" >
-	$("#yytcheng input").css({position: 'relative', top: 100, left: 275}).mousedown(
-	function(){
-		var x = Math.random()*200-100, y = Math.random()*200-100;
-		$(this).animate({left: '+='+x, top: '+='+y}, 500);
-	})	;
-	</script>	
-
-</div>
-
 <div class="demo" id="jewong"> 
 	<input type="button" value="catch me v2">
 	<script type="text/javascript" > 
@@ -102,7 +88,8 @@
 	
 	});
 	</script>
-</input>
+	</input>
+</div>
 
 <div class='demo' id='russkubik'>
 	
@@ -140,6 +127,29 @@
 	});
 	</script>
 
+</div>	
+
+<div class='demo' id='sabad66'>
+	<p>Type some words in the text box below. When finished, click any blank space in the box.</p>
+	<input type='text' value=''>
+	<ul>
+
+	</ul>
+
+	<script type="text/javascript" >
+	// Bind the change event
+	$("#sabad66 input").change(function() {
+		// Any time it is changed, we'll first clear the list
+		var pageList = $('#sabad66 ul');
+		pageList.empty();
+		// Then go thru the list then add each one the ul
+		var listOfWords = $(this).val().split(' ');
+		for(i = 0; i < listOfWords.length; i++)
+		{
+			pageList.append("<li>" + listOfWords[i] + "</li>");
+		}
+	});
+	</script>
 </div>
 
 </body>
