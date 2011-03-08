@@ -11,6 +11,12 @@
 			margin: 25px;
 			border: 1px solid #999;
 		}
+		div.bar {
+			height: 300px;
+			width: 25px;
+			background-color: #030F56;
+			float:left;
+		}
 	</style>
 	<script type="text/javascript">
 	</script>	
@@ -26,9 +32,189 @@
 	function(){
 		var x = Math.random()*200-100, y = Math.random()*200-100;
 		$(this).animate({left: '+='+x, top: '+='+y}, 500);
+	}) ;
+	</script>
+
+</div>
+
+
+<!-- Bananas -->
+<div class='demo' id='jjcmoore'>
+
+<ul id="bananas">
+	<li>Apples</li>
+</ul>
+	<script type="text/javascript" >
+	$("#jjcmoore").click(
+	function(){
+		$('<li>Bananas</li>').appendTo('#bananas');
 	})	;
 	</script>	
+</div>
 
+<div class="demo" id="jewong"> 
+	<input type="button" value="catch me v2">
+	<script type="text/javascript" > 
+		interval = setInterval('moveButton()', 500); 
+		
+		function moveButton() { 
+			var x = Math.round(Math.random() * 500), y = Math.round(Math.random() * 200); 
+			// My manipulation method (.css) 
+			$('#jewong input').css({ position: 'relative', top: y, left: x}); 
+		}
+		
+		// My event method (mousedown()) 
+		$('#jewong input').mousedown(function() {
+			$(this).val('Good job catching me!'); 
+			clearTimeout(interval); 
+		}); 
+	</script> 
+</div>
+
+<div class='demo' id='nasrullahs'>
+	
+	<p>hello world</p>
+	<script type="text/javascript" >
+	
+	$("#nasrullahs p").css({position: 'relative', top: 20, left: 20}).mouseover(
+	function() {
+		$(this).animate({fontSize: "+="+"20px"}, 500);
+	});
+	
+	</script>
+	
+
+</div>
+
+<div class='demo' id='xiaowei'>
+	<input  name = 'apple' type = 'button' value = 'touch me'>
+
+	<script type = "text/javascript">
+	$("#xiaowei input").css({position: 'relative', top: 50, left: 150, height: 200, width: 300}).mouseover(function(){
+
+	$("#xiaowei input").attr("value", "^_____^");
+
+	$(this).fadeTo(1000,0.4);	
+	$(this).css("background-color", "pink"); 
+	});
+	$("#xiaowei input").mouseleave(function(){
+	$(this).fadeTo(1000,1.0);
+	$(this).css("background-color","#F88017");
+	
+	});
+	</script>
+	</input>
+</div>
+
+<div class='demo' id='russkubik'>
+	
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<script type="text/javascript" >
+	$(".bar").mouseenter(
+	function(){
+		$(this).hide('slow');
+	}).mouseleave(
+	function(){
+		$(this).show('slow');
+	});
+	</script>
+
+</div>	
+
+<div class='demo' id='sabad66'>
+	<p>Type some words in the text box below. When finished, click any blank space in the box.</p>
+	<input type='text' value=''>
+	<ul>
+
+	</ul>
+
+	<script type="text/javascript" >
+	// Bind the change event
+	$("#sabad66 input").change(function() {
+		// Any time it is changed, we'll first clear the list
+		var pageList = $('#sabad66 ul');
+		pageList.empty();
+		// Then go thru the list then add each one the ul
+		var listOfWords = $(this).val().split(' ');
+		for(i = 0; i < listOfWords.length; i++)
+		{
+			pageList.append("<li>" + listOfWords[i] + "</li>");
+		}
+	});
+
+	</script>	
+
+</div>
+
+<!-- Colour the quote (Reviewed by ekryski)-->
+<div class='demo' id='chyfung'>
+
+	<p id='Churchill_quote'>
+	A man does what he must - in spite of personal consequences, in spite of obstacles and dangers and pressures - and that is the basis of all human morality. 
+	Winston Churchill
+	</p>
+
+	<ul id='chyfung_list'>
+		<li style='color: #FF0000' id='chyfung_red'> red </li>
+		<li style='color: #0000FF' id='chyfung_blue'> blue </li>
+		<li style='color: #00FF00' id='chyfung_green'> green </li>
+		<li style='color: #000000' id='chyfung_black'> black </li>
+	</ul>
+	
+	<script type="text/javascript">
+	$('#chyfung_red').click(function(){
+		$('#Churchill_quote').attr('style', 'color: #FF0000');
+	});
+	$('#chyfung_blue').click(function(){
+		$('#Churchill_quote').attr('style', 'color: #0000FF');
+	});
+	$('#chyfung_green').click(function(){
+		$('#Churchill_quote').attr('style', 'color: #00FF00');
+	});
+	$('#chyfung_black').click(function(){
+		$('#Churchill_quote').attr('style', 'color: #000000');
+	});
+	</script>
+	
+</div>
+
+<div class='demo' id='dylanprocter'>
+
+    <h1 id='number'>0</h1>
+	
+	<script type="text/javascript">
+	var counter = 0;
+	$('#dylanprocter').mouseenter(function() {
+		$('#number').html(counter++);
+	});
+	$('#dylanprocter').click(function() {
+		$('#number').html(counter--);
+	});
+	</script>
+	
 </div>
 
 <div class='demo' id='QuickS1lver'>
