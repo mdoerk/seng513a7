@@ -17,6 +17,12 @@
 			background-color: #030F56;
 			float:left;
 		}
+		div.box {
+			height: 300px;
+			width: 200px;
+			background-color: #000000;
+			float:left;
+		}
 	</style>
 	<script type="text/javascript">
 	</script>	
@@ -201,5 +207,18 @@
 	
 </div>
 
+<div class='demo' id='henry-c'>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<script type="text/javascript">
+	$(".box").click(
+	function () {
+		$(this).hide('slow');
+		$(this).show('slow');
+		$(this).attr('style', 'background-color: #'+Math.floor(Math.random()*16777215).toString(16));
+		});
+	</script>
+</div>
 </body>
 </html>
