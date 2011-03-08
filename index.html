@@ -17,6 +17,20 @@
 			background-color: #030F56;
 			float:left;
 		}
+		p.news{
+			height: 20px;
+			width: 140px;
+			margin: 25px;
+			border: 1px solid #999;
+		}
+		p.activate {
+		display: none;
+		}
+	
+		span {
+		display:none;
+		}
+		
 	</style>
 	<script type="text/javascript">
 	</script>	
@@ -199,6 +213,23 @@
 	});
 	</script>
 	
+</div>
+
+<div class='demo' id='chunkjh'>
+	<p class="news">Hey you know what?</p>
+	<span> You are Awesome  </span>
+
+	<script type="text/javascript" >
+	$("p.news").click(function(){
+		$(this).removeClass("news");
+		$(this).addClass("activate");
+		$("span").css('display', 'inline').fadeOut(1000).fadeIn(1000);
+	});
+	
+
+
+	</script>	
+
 </div>
 
 </body>
