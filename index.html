@@ -169,6 +169,31 @@
 
 </div>
 
+<!-- Umer's Changes -->
+<div class='demo' id='mumansoo'>
+	
+	<ul>
+	<li><a href="#"> Umer was here </a></li>
+	<li> <a href="http://www.microsoft.com"> M$ is great! Buy!! </a></li>
+	<li> <a href="http://www.toothpastefordinner.com/053107/cool-uncle.gif"> Give me some </a></li>
+	</ul>
+
+	<script type="text/javascript" >	
+		var fadeDuration = 150; //time in milliseconds
+      
+      $('#mumansoo li a').hover(function() {
+        $(this).animate({ paddingLeft: '30px' }, fadeDuration);
+        $(this).children('span').show().animate({ left: -5 }, fadeDuration);
+      }, function() {
+        $(this).animate({ paddingLeft: '15px' }, fadeDuration);
+        $(this).children('span').animate({ left: -35 }, fadeDuration).fadeOut(fadeDuration);          
+      });
+	  
+	</script>	
+
+</div>
+
+
 <!-- Colour the quote (Reviewed by ekryski)-->
 <div class='demo' id='chyfung'>
 
