@@ -11,6 +11,12 @@
 			margin: 25px;
 			border: 1px solid #999;
 		}
+		div.bar {
+			height: 300px;
+			width: 25px;
+			background-color: #030F56;
+			float:left;
+		}
 	</style>
 	<script type="text/javascript">
 	</script>	
@@ -26,8 +32,8 @@
 	function(){
 		var x = Math.random()*200-100, y = Math.random()*200-100;
 		$(this).animate({left: '+='+x, top: '+='+y}, 500);
-	})	;
-	</script>	
+	}) ;
+	</script>
 
 </div>
 
@@ -97,7 +103,46 @@
 	
 	});
 	</script>
-</input>	
+	</input>
+</div>
+
+<div class='demo' id='russkubik'>
+	
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<script type="text/javascript" >
+	$(".bar").mouseenter(
+	function(){
+		$(this).hide('slow');
+	}).mouseleave(
+	function(){
+		$(this).show('slow');
+	});
+	</script>
+
+</div>	
 
 <div class='demo' id='sabad66'>
 	<p>Type some words in the text box below. When finished, click any blank space in the box.</p>
@@ -119,6 +164,7 @@
 			pageList.append("<li>" + listOfWords[i] + "</li>");
 		}
 	});
+
 	</script>	
 
 </div>
