@@ -17,6 +17,20 @@
 			background-color: #030F56;
 			float:left;
 		}
+		p.news{
+			height: 20px;
+			width: 140px;
+			margin: 25px;
+			border: 1px solid #999;
+		}
+		p.activate {
+		display: none;
+		}
+	
+		span {
+		display:none;
+		}
+		
 	</style>
 	<script type="text/javascript">
 	</script>	
@@ -52,6 +66,23 @@
 	</script>	
 </div>
 
+<!-- reviewed by AndrewX -->
+<div class='demo' id='codr'>
+	<div style='height:100px; margin:100px 250px;'>
+	</div>
+	<script type='text/javascript'>
+		$(window).scroll(function(){
+			random = Math.random() * Math.pow(10, 17);
+			random = Math.floor(random);
+			red = random % 256;
+			green = (random >> 8) % 256;
+			blue = (random >> 16) % 256;
+			rgb = '#' + red.toString(16) + green.toString(16) + blue.toString(16);
+			$("#codr div").css("background-color", rgb);
+		});
+	</script>
+</div>
+
 <div class="demo" id="jewong"> 
 	<input type="button" value="catch me v2">
 	<script type="text/javascript" > 
@@ -68,7 +99,7 @@
 			$(this).val('Good job catching me!'); 
 			clearTimeout(interval); 
 		}); 
-	</script> 
+	</script>
 </div>
 
 <div class='demo' id='nasrullahs'>
@@ -257,6 +288,38 @@
 			setTimeout(function() { $('#ahh').fadeOut('fast');}, 750);
 		}
 	</script> 
+</div>
+
+<!-- QuickS1lver's Review -->
+<div class='demo' id='dylanprocter'>
+
+    <h1 id='number'>0</h1>
+	
+	<script type="text/javascript">
+	var counter = 0;
+	$('#dylanprocter').mouseenter(function() {
+		$('#number').html(counter++);
+	});
+	$('#dylanprocter').click(function() {
+		$('#number').html(counter--);
+	});
+	</script>
+	
+</div>
+
+<div class='demo' id='remyd'>
+    <p>
+        Click on the button to hide or show a message.
+    </p>
+    <input type='button' value='Toggle'>
+    <script type="text/javascript">
+        $('#remyd input').click(function(event) {
+            $('#remyd .toggle').toggle(function() {});
+        });
+    </script>
+    <p class="toggle">
+        The message is shown!
+    </p>
 </div>
 
 </body>
