@@ -226,5 +226,20 @@
 	
 </div>
 
+<div class='demo' id='awthornt'>
+
+	<input type='button' value='Catch me!'>
+
+	<script type="text/javascript" >
+	$("#awthornt input").css({position: 'relative', top: 150, left: 275}).mouseenter(
+	function(){
+		var x = Math.random()*275, y = Math.random()*525;
+		$(this).css({position: 'relative', top: x, left: y});
+		$(this).val('Missed me!');
+	}) ;
+	</script>
+	
+</div>
+
 </body>
 </html>
