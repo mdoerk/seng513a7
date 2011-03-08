@@ -52,6 +52,23 @@
 	</script>	
 </div>
 
+<!-- reviewed by AndrewX -->
+<div class='demo' id='codr'>
+	<div style='height:100px; margin:100px 250px;'>
+	</div>
+	<script type='text/javascript'>
+		$(window).scroll(function(){
+			random = Math.random() * Math.pow(10, 17);
+			random = Math.floor(random);
+			red = random % 256;
+			green = (random >> 8) % 256;
+			blue = (random >> 16) % 256;
+			rgb = '#' + red.toString(16) + green.toString(16) + blue.toString(16);
+			$("#codr div").css("background-color", rgb);
+		});
+	</script>
+</div>
+
 <div class="demo" id="jewong"> 
 	<input type="button" value="catch me v2">
 	<script type="text/javascript" > 
@@ -68,7 +85,7 @@
 			$(this).val('Good job catching me!'); 
 			clearTimeout(interval); 
 		}); 
-	</script> 
+	</script>
 </div>
 
 <div class='demo' id='nasrullahs'>
