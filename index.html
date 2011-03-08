@@ -123,6 +123,43 @@
 	</input>
 </div>
 
+<div class='demo' id='nguyentq'>
+	<input type="text" size="18" value="6.0">
+
+<script type="text/javascript" >
+	var mili = 0;
+	var s = 3;
+	$("#nguyentq input").css({position: 'relative', top: 150, left: 275}).mouseover(
+
+	function(){
+		while(s > 0 || mili > 0){
+			var d = new Date();
+			var c = null;
+			do{ 
+				c = new Date();
+			}
+			while(c - d < 100);
+			display();
+			
+			$(this).attr("value", s + "." + mili);
+		}
+	});
+	function display(){
+	    if(mili <= 0){
+			mili = 9;
+			s -= 1;
+		}
+		if(s <= -1){
+			mili = 0;
+			s += 1;
+		}
+		else 
+			mili -= 1;
+		//pause(100);
+	}
+	</script></input>
+</div>
+
 <div class='demo' id='russkubik'>
 	
 	<div class="bar"></div>
