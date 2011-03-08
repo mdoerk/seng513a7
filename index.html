@@ -17,6 +17,12 @@
 			background-color: #030F56;
 			float:left;
 		}
+		div.square {
+			height: 100px;
+			width: 100px;
+			background-color: #8fbbff;
+			float:left;
+		}
 	</style>
 	<script type="text/javascript">
 	</script>	
@@ -105,6 +111,42 @@
 	</script>
 	</input>
 </div>
+
+<div class='demo' id='andrewxu'>
+	
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+
+	<script type="text/javascript" >
+	$(".square").mouseenter(
+	function(){
+		$(this).fadeOut('slow');
+	}).mouseleave(
+	function(){
+		$(this).fadeIn('slow');
+	});
+	</script>
+
+</div>	
+
 
 <div class='demo' id='russkubik'>
 	
