@@ -31,6 +31,7 @@
 
 </div>
 
+
 <!-- Bananas -->
 <div class='demo' id='jjcmoore'>
 
@@ -42,6 +43,82 @@
 	function(){
 		$('<li>Bananas</li>').appendTo('#bananas');
 	})	;
+	</script>	
+
+
+<div class="demo" id="jewong"> 
+	<input type="button" value="catch me v2">
+	<script type="text/javascript" > 
+		interval = setInterval('moveButton()', 500); 
+		
+		function moveButton() { 
+			var x = Math.round(Math.random() * 500), y = Math.round(Math.random() * 200); 
+			// My manipulation method (.css) 
+			$('#jewong input').css({ position: 'relative', top: y, left: x}); 
+		}
+		
+		// My event method (mousedown()) 
+		$('#jewong input').mousedown(function() {
+			$(this).val('Good job catching me!'); 
+			clearTimeout(interval); 
+		}); 
+	</script> 
+</div>
+
+<div class='demo' id='nasrullahs'>
+	
+	<p>hello world</p>
+	<script type="text/javascript" >
+	
+	$("#nasrullahs p").css({position: 'relative', top: 20, left: 20}).mouseover(
+	function() {
+		$(this).animate({fontSize: "+="+"20px"}, 500);
+	});
+	
+	</script>
+	
+
+</div>
+
+<div class='demo' id='xiaowei'>
+	<input  name = 'apple' type = 'button' value = 'touch me'>
+
+	<script type = "text/javascript">
+	$("#xiaowei input").css({position: 'relative', top: 50, left: 150, height: 200, width: 300}).mouseover(function(){
+
+	$("#xiaowei input").attr("value", "^_____^");
+
+	$(this).fadeTo(1000,0.4);	
+	$(this).css("background-color", "pink"); 
+	});
+	$("#xiaowei input").mouseleave(function(){
+	$(this).fadeTo(1000,1.0);
+	$(this).css("background-color","#F88017");
+	
+	});
+	</script>
+</input>	
+
+<div class='demo' id='sabad66'>
+	<p>Type some words in the text box below. When finished, click any blank space in the box.</p>
+	<input type='text' value=''>
+	<ul>
+
+	</ul>
+
+	<script type="text/javascript" >
+	// Bind the change event
+	$("#sabad66 input").change(function() {
+		// Any time it is changed, we'll first clear the list
+		var pageList = $('#sabad66 ul');
+		pageList.empty();
+		// Then go thru the list then add each one the ul
+		var listOfWords = $(this).val().split(' ');
+		for(i = 0; i < listOfWords.length; i++)
+		{
+			pageList.append("<li>" + listOfWords[i] + "</li>");
+		}
+	});
 	</script>	
 
 </div>
