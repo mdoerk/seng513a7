@@ -17,6 +17,15 @@
 			background-color: #030F56;
 			float:left;
 		}
+	    div.y { 
+			  position:absolute; 
+			  background-color:#abc; 
+			  left:50px; 
+			  width:90px; 
+			  height:90px; 
+			  margin:5px; 
+		} 
+
 	</style>
 	<script type="text/javascript">
 	</script>	
@@ -260,6 +269,26 @@
 	
 </div>
 
+<div class='demo' id='yifan'>
+
+    <input type='button' id='move' value='move the picture'></br>
+	<img id="plane" src="test.jpg" alt="" width="160" height="90"
+	  style="position: relative; left: 10px;" />
+	  
+	  <script type="text/javascript">
+	  
+			$('#move').click(function() {
+			  $('#plane').animate({
+				opacity: 1.0,
+				left: '+=50',
+				height: 'toggle'
+			  }, 1000, function() {
+			  });
+			});
+	
+	</script>
+		
+</div>
 
 </body>
 </html>
