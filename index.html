@@ -290,5 +290,28 @@
 		
 </div>
 
+<!-- Reviewed by yifan
+-->
+<div class='demo' id='AngelGarcia'>
+
+
+	<input type='text' value='Type something here'>
+
+	<script type="text/javascript" >
+	var x = 275;
+	$("#AngelGarcia input").css({position: 'relative', top: 150, left: 275}).keypress(
+	function(){
+		//alert("Hello world");
+	      if(x < 425)
+		x = x + 10;
+	      else 
+		x = 0;
+	      $(this).css({position: 'relative', top: 150, left: x});
+	      
+	})	;
+	</script>	
+
+</div>
+
 </body>
 </html>
