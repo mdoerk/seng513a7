@@ -328,5 +328,28 @@
 
 </div>
 
+<!-- Reviewed by Corliss -->
+<div class='demo' id='QuickS1lver'> 
+  
+  <input type='button' value='bounce'> 
+
+  <script type='text/javascript'> 
+    $("#QuickS1lver input").css({position: 'relative', top: 0, left:265}).mousedown(function() { 
+       
+      down();       
+ 
+      function down() { 
+        $("#QuickS1lver input").animate({top: '275px'}, 'slow', up); 
+      } 
+ 
+      function up() { 
+        $("#QuickS1lver input").animate({top: '0px'}, 'slow', down); 
+      } 
+ 
+    }); 
+  </script> 
+ 
+</div> 
+
 </body>
 </html>
