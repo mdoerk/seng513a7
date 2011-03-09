@@ -371,5 +371,28 @@
 </div>
 
 
+<div class='demo' id='jguimera'>
+  <p id="p1">Paragraph number1</p>
+  <p id="p2">Paragraph number2</p>
+  <input type='button' value='Show Paragraphs' disabled="disabled">
+  <script type='text/javascript'>
+      $("#p1").click(function () {
+            $(this).fadeOut();
+            $("#jguimera input").css({position: 'relative'}).removeAttr("disabled");
+      });
+     $("#p2").click(function () {
+         $(this).fadeOut();
+         $("#jguimera input").css({position: 'relative'}).removeAttr("disabled");
+      });
+     $("#jguimera input").css({position: 'relative'}).click(function(){
+            $("#p1").show();
+            $("#p2").show();
+            $(this).attr("disabled","disabled");
+        });
+  </script>
+
+
+</div>
+
 </body>
 </html>
