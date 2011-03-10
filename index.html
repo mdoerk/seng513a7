@@ -31,13 +31,6 @@
 			  height:90px; 
 			  margin:5px; 
 		} 
-		
-		div.blackBoard{
-			height: 250px;
-			width:600px;
-			background-color: #000000;
-			boarder:1px solid #FFFFFF;
-		}
 
 	</style>
 	<script type="text/javascript">
@@ -485,32 +478,6 @@ $('#ahh').css({position: 'relative', top: xpos, left: ypos})
 setTimeout(function() { $('#ahh').fadeOut('fast');}, 750);
 }
 </script>
-</div>
-
-<div class="demo" id="wwywu">
-<p>Blackboard</p>
-<div class="blackBoard" id="blackBoard">
-<script type ="text/javascript">
-var draw = false;
-$('#blackBoard').mousedown(function(){draw = true;});
-$('#blackBoard').mouseup(function(){draw = false;});
-var drawingpix;
-
-$('#blackBoard').mousemove(function(e){
-	if(draw == true){
-		drawingpix = $('<span>').css({
-									'position':'absolute',
-									'background-color':'#FFFFFF',
-									'width':'2px',
-									'height':'2px',
-									top:e.pageY,
-									left:e.pageX
-									});
-		$('#blackBoard').append(drawingpix);
-	}
-});
-</script>
-</div>
 </div>
 
 </body>
