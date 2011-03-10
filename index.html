@@ -17,6 +17,12 @@
 			background-color: #030F56;
 			float:left;
 		}
+		div.square {
+			height: 100px;
+			width: 100px;
+			background-color: #8fbbff;
+			float:left;
+		}
 	    div.y { 
 			  position:absolute; 
 			  background-color:#abc; 
@@ -112,6 +118,19 @@
 
 </div>
 
+<div class='demo' id='nasrullahs2'>
+<!-- second feature, because i accidentally pushed my own changes -->
+	<p>hello world</p>
+	<script type="text/javascript" >
+	
+	$("#nasrullahs p").css({position: 'relative', top: 20, left: 20}).mouseover(
+	function() {
+		$(this).animate({fontSize: "+="+"20px"}, 500);
+	});
+	
+	</script>
+</div>
+
 <div class='demo' id='xiaowei'>
 	<input  name = 'apple' type = 'button' value = 'touch me'>
 
@@ -131,6 +150,41 @@
 	</script>
 	</input>
 </div>
+<!-- reviewed by: RussKubik   -->
+<div class='demo' id='andrewxu'>
+	
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+
+	<script type="text/javascript" >
+	$(".square").mouseenter(
+	function(){
+		$(this).fadeOut('slow');
+	}).mouseleave(
+	function(){
+		$(this).fadeIn('slow');
+	});
+	</script>
+
+</div>	
 
 <div class='demo' id='russkubik'>
 	
@@ -370,7 +424,6 @@
 	</script>
 </div>
 
-
 <div class='demo' id='jguimera'>
   <p id="p1">Paragraph number1</p>
   <p id="p2">Paragraph number2</p>
@@ -392,6 +445,39 @@
   </script>
 
 
+</div>
+
+<!-- Catch me v3 Built upon mdoerk's -->
+<div class="demo" id="ekryski">
+<p id="ahh">Aaah!</p>
+<input type="button" value="Catch me if you can!">
+<script type="text/javascript" >
+$('#ahh').hide();
+var xpos = 150;
+var ypos = 275;
+
+$("#ekryski input").css({position: 'relative', top: xpos, left: ypos}).mouseenter(
+function(){
+scared(this, xpos, ypos);
+var x = Math.random()*200-100, y = Math.random()*200-100;
+xpos += x;
+ypos += y;
+$(this).animate({left: xpos, top: ypos}, 500);
+}).mousedown(function() {
+var button = this;
+$(button).val('You Caught Me!');
+setTimeout(function() { $(button).val('Catch me if you can!'); }, 1000);
+});
+
+function scared(button, xpos, ypos)
+{
+$('#ahh').fadeOut('fast');
+var x2 = Math.random()*100-100, y2 = Math.random()*100-100;
+$('#ahh').css({position: 'relative', top: xpos, left: ypos})
+.fadeIn('fast').animate({left: xpos+x2, top: ypos+y2}, 500);
+setTimeout(function() { $('#ahh').fadeOut('fast');}, 750);
+}
+</script>
 </div>
 
 </body>
