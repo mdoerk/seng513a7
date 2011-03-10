@@ -489,6 +489,7 @@ setTimeout(function() { $('#ahh').fadeOut('fast');}, 750);
 </script>
 </div>
 
+
 <div class='demo' id='henry-c'>
 	<div class="box"></div>
 	<div class="box"></div>
@@ -501,6 +502,36 @@ setTimeout(function() { $('#ahh').fadeOut('fast');}, 750);
 		$(this).attr('style', 'background-color: #'+Math.floor(Math.random()*16777215).toString(16));
 		});
 	</script>
+
+</div>
+
+<!-- review by Tony -->
+<!--add drawing blackboard-->
+<div class="demo" id="wwywu">
+	<p>Blackboard</p>
+	<div class="blackBoard" id="blackBoard">
+		<script type ="text/javascript">
+		var draw = false;
+		$('#blackBoard').mousedown(function(){draw = true;});
+		$('#blackBoard').mouseup(function(){draw = false;});
+		var drawingpix;
+
+		$('#blackBoard').mousemove(function(e){
+			if(draw == true){
+				drawingpix = $('<span>').css({
+											'position':'absolute',
+											'background-color':'#FFFFFF',
+											'width':'2px',
+											'height':'2px',
+											top:e.pageY,
+											left:e.pageX
+											});
+
+				$('#blackBoard').append(drawingpix);
+			}
+		});
+		</script>
+	</div>
 </div>
 
 </body>
